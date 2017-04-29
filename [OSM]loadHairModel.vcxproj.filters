@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{b1b6757d-9e40-43fe-8aef-a870b97ab921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own">
+      <UniqueIdentifier>{7087fa1b-47c1-48de-a259-fe02c47e687c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\external_head">
+      <UniqueIdentifier>{ee77f171-733c-4649-9ce1-969ff4a17d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\external_source">
+      <UniqueIdentifier>{0ff20a5f-cd52-4878-9a71-118e5c845d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\ikd_head">
+      <UniqueIdentifier>{efa392cd-f589-49d2-9efd-3ebc51dc3951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\ikd_source">
+      <UniqueIdentifier>{849d016f-aeb1-49c5-8458-f248f90364ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg">
+      <UniqueIdentifier>{5c6b903e-f108-4fa2-a483-175dafde5f34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head">
+      <UniqueIdentifier>{28f5887f-548c-43d0-a970-9e9ea63c76ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source">
+      <UniqueIdentifier>{24922e02-6be0-48c3-9f1a-543e2a4e0908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Objects">
+      <UniqueIdentifier>{9391f376-0b72-4a84-a017-6448f44a5661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Objects">
+      <UniqueIdentifier>{29619228-9a6a-4b25-a411-090736e1c7a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Render">
+      <UniqueIdentifier>{e7023c22-3ff1-45d5-bd0d-4912adbc4a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Render">
+      <UniqueIdentifier>{f9e343b4-9f1c-4984-8271-ae3148229bec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Render\Opacity">
+      <UniqueIdentifier>{6f9da289-6fa4-4c72-9ba2-874f43009187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\CallBack">
+      <UniqueIdentifier>{b8d1628f-a384-4878-92b9-e9ff2e44505a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\CallBack">
+      <UniqueIdentifier>{e11d9ae3-8a90-4b84-9640-379e54536c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Render\DepthMapShadows">
+      <UniqueIdentifier>{4bda50ff-c8dc-4b69-991c-5f9a95fa7913}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Render\Opacity">
+      <UniqueIdentifier>{69fcc574-7746-4586-9920-a5dfe644d357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Render\DepthMapShadows">
+      <UniqueIdentifier>{1c10e18e-7dbe-4a29-aa15-4f6aadb37289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Render\LineOpacity">
+      <UniqueIdentifier>{3c593eda-3007-409e-b41a-7a821e18d947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Render\LineOpacity">
+      <UniqueIdentifier>{1a0f5f02-516d-45f4-b954-fc004d1dc9f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Render\RibbonOpacity">
+      <UniqueIdentifier>{4e90a525-2d33-45e5-89c5-9e76d6973629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Render\RibbonOpacity">
+      <UniqueIdentifier>{01381139-9fa1-438f-ae54-0a97c313ef1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Render\TriangleOpacity">
+      <UniqueIdentifier>{6b0fb314-fe8d-4c6d-b5f1-3ac42d6ce339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Render\TriangleOpacity">
+      <UniqueIdentifier>{42b02d79-dad5-496b-811f-ae3eef4ebd0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Render\RectangleOpacity">
+      <UniqueIdentifier>{46c502c6-7104-4441-a8a8-2d1d1812809a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Render\RectangleOpacity">
+      <UniqueIdentifier>{3e8c13aa-6518-4cab-bef1-ea45eebaea28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_head\Support">
+      <UniqueIdentifier>{813b46d5-ab90-4cf3-af35-103d7fc74a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="own\Akg\Akg_source\Support">
+      <UniqueIdentifier>{f8c44d1a-5ef4-450f-a58e-d809eab472cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\external_cyHairFile.h">
+      <Filter>external\external_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\external_futil.h">
+      <Filter>external\external_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ikdContactWithGPU.h">
+      <Filter>own\ikd_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ikdDataSet.h">
+      <Filter>own\ikd_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ikdErrorCheck.h">
+      <Filter>own\ikd_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ikdObjects.h">
+      <Filter>own\ikd_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ikdPrepareShader.h">
+      <Filter>own\ikd_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\external_loadbmp.h">
+      <Filter>external\external_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgGeneralManager.h">
+      <Filter>own\Akg\Akg_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgLoadObj.h">
+      <Filter>own\Akg\Akg_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgShaderGenerator.h">
+      <Filter>own\Akg\Akg_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgHairBall.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgCubeAggregate.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgObjects.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderOpacityDepth.h">
+      <Filter>own\Akg\Akg_head\Render\Opacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgTypeDef.h">
+      <Filter>own\Akg\Akg_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderOpacityMap.h">
+      <Filter>own\Akg\Akg_head\Render\Opacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgTextureGenerator.h">
+      <Filter>own\Akg\Akg_head</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderOpacityEvaluate.h">
+      <Filter>own\Akg\Akg_head\Render\Opacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgPlane.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgKeyboard.h">
+      <Filter>own\Akg\Akg_head\CallBack</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgReshape.h">
+      <Filter>own\Akg\Akg_head\CallBack</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgIdle.h">
+      <Filter>own\Akg\Akg_head\CallBack</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgMotion.h">
+      <Filter>own\Akg\Akg_head\CallBack</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderDepthMap.h">
+      <Filter>own\Akg\Akg_head\Render\DepthMapShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderDepthMapshadows.h">
+      <Filter>own\Akg\Akg_head\Render\DepthMapShadows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgMouse.h">
+      <Filter>own\Akg\Akg_head\CallBack</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgLineHairBall.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderLineOpacityDepth.h">
+      <Filter>own\Akg\Akg_head\Render\LineOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderLineOpacityEvaluate.h">
+      <Filter>own\Akg\Akg_head\Render\LineOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderLineOpacityMap.h">
+      <Filter>own\Akg\Akg_head\Render\LineOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRibbonHairBall.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderRibbonOpacityDepth.h">
+      <Filter>own\Akg\Akg_head\Render\RibbonOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderRibbonOpacityEvaluate.h">
+      <Filter>own\Akg\Akg_head\Render\RibbonOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderRibbonOpacityMap.h">
+      <Filter>own\Akg\Akg_head\Render\RibbonOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderTriangleOpacityDepth.h">
+      <Filter>own\Akg\Akg_head\Render\TriangleOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderTriangleOpacityEvaluate.h">
+      <Filter>own\Akg\Akg_head\Render\TriangleOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderTriangleOpacityMap.h">
+      <Filter>own\Akg\Akg_head\Render\TriangleOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgTriangleHairBall.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderRectangleOpacityDepth.h">
+      <Filter>own\Akg\Akg_head\Render\RectangleOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderRectangleOpacityEvaluate.h">
+      <Filter>own\Akg\Akg_head\Render\RectangleOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRenderRectangleOpacityMap.h">
+      <Filter>own\Akg\Akg_head\Render\RectangleOpacity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AkgRectangleHairBall.h">
+      <Filter>own\Akg\Akg_head\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="source\readPixel.h">
+      <Filter>own\Akg\Akg_head\Support</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\external_futil.c">
+      <Filter>external\external_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ikdContactWithGPU.cpp">
+      <Filter>own\ikd_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ikdDataSet.cpp">
+      <Filter>own\ikd_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ikdErrorCheck.cpp">
+      <Filter>own\ikd_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ikdObjects.cpp">
+      <Filter>own\ikd_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ikdPrepareShader.cpp">
+      <Filter>own\ikd_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Main.cpp">
+      <Filter>own\ikd_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\external_loadbmp.c">
+      <Filter>external\external_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgGeneralManager.cpp">
+      <Filter>own\Akg\Akg_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgShaderGenerator.cpp">
+      <Filter>own\Akg\Akg_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgHairBall.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgLoadObj.cpp">
+      <Filter>own\Akg\Akg_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgCubeAggregate.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgObjects.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgTextureGenerator.cpp">
+      <Filter>own\Akg\Akg_source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgPlane.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgKeyboard.cpp">
+      <Filter>own\Akg\Akg_source\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgReshape.cpp">
+      <Filter>own\Akg\Akg_source\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgIdle.cpp">
+      <Filter>own\Akg\Akg_source\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgMotion.cpp">
+      <Filter>own\Akg\Akg_source\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderOpacityDepth.cpp">
+      <Filter>own\Akg\Akg_source\Render\Opacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderOpacityEvaluate.cpp">
+      <Filter>own\Akg\Akg_source\Render\Opacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderOpacityMap.cpp">
+      <Filter>own\Akg\Akg_source\Render\Opacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderDepthMap.cpp">
+      <Filter>own\Akg\Akg_source\Render\DepthMapShadows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderDepthMapShadows.cpp">
+      <Filter>own\Akg\Akg_source\Render\DepthMapShadows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgMouse.cpp">
+      <Filter>own\Akg\Akg_source\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgLineHairBall.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderLineOpacityDepth.cpp">
+      <Filter>own\Akg\Akg_source\Render\LineOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderLineOpacityEvaluate.cpp">
+      <Filter>own\Akg\Akg_source\Render\LineOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderLineOpacityMap.cpp">
+      <Filter>own\Akg\Akg_source\Render\LineOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRibbonHairBall.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderRibbonOpacityDepth.cpp">
+      <Filter>own\Akg\Akg_source\Render\RibbonOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderRibbonOpacityEvaluate.cpp">
+      <Filter>own\Akg\Akg_source\Render\RibbonOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderRibbonOpacityMap.cpp">
+      <Filter>own\Akg\Akg_source\Render\RibbonOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderTriangleOpacityDepth.cpp">
+      <Filter>own\Akg\Akg_source\Render\TriangleOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderTriangleOpacityEvaluate.cpp">
+      <Filter>own\Akg\Akg_source\Render\TriangleOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderTriangleOpacityMap.cpp">
+      <Filter>own\Akg\Akg_source\Render\TriangleOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgTriangleHairBall.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderRectangleOpacityDepth.cpp">
+      <Filter>own\Akg\Akg_source\Render\RectangleOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderRectangleOpacityEvaluate.cpp">
+      <Filter>own\Akg\Akg_source\Render\RectangleOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRenderRectangleOpacityMap.cpp">
+      <Filter>own\Akg\Akg_source\Render\RectangleOpacity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AkgRectangleHairBall.cpp">
+      <Filter>own\Akg\Akg_source\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\readPixel.cpp">
+      <Filter>own\Akg\Akg_source\Support</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

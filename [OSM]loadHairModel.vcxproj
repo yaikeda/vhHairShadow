@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\AkgCubeAggregate.h" />
+    <ClInclude Include="source\AkgLineHairBall.h" />
+    <ClInclude Include="source\AkgMouse.h" />
+    <ClInclude Include="source\AkgRectangleHairBall.h" />
+    <ClInclude Include="source\AkgRenderDepthMap.h" />
+    <ClInclude Include="source\AkgGeneralManager.h" />
+    <ClInclude Include="source\AkgHairBall.h" />
+    <ClInclude Include="source\AkgIdle.h" />
+    <ClInclude Include="source\AkgKeyboard.h" />
+    <ClInclude Include="source\AkgLoadObj.h" />
+    <ClInclude Include="source\AkgMotion.h" />
+    <ClInclude Include="source\AkgObjects.h" />
+    <ClInclude Include="source\AkgPlane.h" />
+    <ClInclude Include="source\AkgRenderDepthMapshadows.h" />
+    <ClInclude Include="source\AkgRenderLineOpacityDepth.h" />
+    <ClInclude Include="source\AkgRenderLineOpacityEvaluate.h" />
+    <ClInclude Include="source\AkgRenderLineOpacityMap.h" />
+    <ClInclude Include="source\AkgRenderOpacityDepth.h" />
+    <ClInclude Include="source\AkgRenderOpacityEvaluate.h" />
+    <ClInclude Include="source\AkgRenderOpacityMap.h" />
+    <ClInclude Include="source\AkgRenderRectangleOpacityDepth.h" />
+    <ClInclude Include="source\AkgRenderRectangleOpacityEvaluate.h" />
+    <ClInclude Include="source\AkgRenderRectangleOpacityMap.h" />
+    <ClInclude Include="source\AkgRenderRibbonOpacityDepth.h" />
+    <ClInclude Include="source\AkgRenderRibbonOpacityEvaluate.h" />
+    <ClInclude Include="source\AkgRenderRibbonOpacityMap.h" />
+    <ClInclude Include="source\AkgRenderTriangleOpacityDepth.h" />
+    <ClInclude Include="source\AkgRenderTriangleOpacityEvaluate.h" />
+    <ClInclude Include="source\AkgRenderTriangleOpacityMap.h" />
+    <ClInclude Include="source\AkgReshape.h" />
+    <ClInclude Include="source\AkgRibbonHairBall.h" />
+    <ClInclude Include="source\AkgShaderGenerator.h" />
+    <ClInclude Include="source\AkgTextureGenerator.h" />
+    <ClInclude Include="source\AkgTriangleHairBall.h" />
+    <ClInclude Include="source\AkgTypeDef.h" />
+    <ClInclude Include="source\external_cyHairFile.h" />
+    <ClInclude Include="source\external_futil.h" />
+    <ClInclude Include="source\external_loadbmp.h" />
+    <ClInclude Include="source\ikdContactWithGPU.h" />
+    <ClInclude Include="source\ikdDataSet.h" />
+    <ClInclude Include="source\ikdErrorCheck.h" />
+    <ClInclude Include="source\ikdObjects.h" />
+    <ClInclude Include="source\ikdPrepareShader.h" />
+    <ClInclude Include="source\readPixel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\AkgCubeAggregate.cpp" />
+    <ClCompile Include="source\AkgGeneralManager.cpp" />
+    <ClCompile Include="source\AkgHairBall.cpp" />
+    <ClCompile Include="source\AkgIdle.cpp" />
+    <ClCompile Include="source\AkgKeyboard.cpp" />
+    <ClCompile Include="source\AkgLineHairBall.cpp" />
+    <ClCompile Include="source\AkgLoadObj.cpp" />
+    <ClCompile Include="source\AkgMotion.cpp" />
+    <ClCompile Include="source\AkgMouse.cpp" />
+    <ClCompile Include="source\AkgObjects.cpp" />
+    <ClCompile Include="source\AkgPlane.cpp" />
+    <ClCompile Include="source\AkgRectangleHairBall.cpp" />
+    <ClCompile Include="source\AkgRenderDepthMap.cpp" />
+    <ClCompile Include="source\AkgRenderDepthMapShadows.cpp" />
+    <ClCompile Include="source\AkgRenderLineOpacityDepth.cpp" />
+    <ClCompile Include="source\AkgRenderLineOpacityEvaluate.cpp" />
+    <ClCompile Include="source\AkgRenderLineOpacityMap.cpp" />
+    <ClCompile Include="source\AkgRenderOpacityDepth.cpp" />
+    <ClCompile Include="source\AkgRenderOpacityEvaluate.cpp" />
+    <ClCompile Include="source\AkgRenderOpacityMap.cpp" />
+    <ClCompile Include="source\AkgRenderRectangleOpacityDepth.cpp" />
+    <ClCompile Include="source\AkgRenderRectangleOpacityEvaluate.cpp" />
+    <ClCompile Include="source\AkgRenderRectangleOpacityMap.cpp" />
+    <ClCompile Include="source\AkgRenderRibbonOpacityDepth.cpp" />
+    <ClCompile Include="source\AkgRenderRibbonOpacityEvaluate.cpp" />
+    <ClCompile Include="source\AkgRenderRibbonOpacityMap.cpp" />
+    <ClCompile Include="source\AkgRenderTriangleOpacityDepth.cpp" />
+    <ClCompile Include="source\AkgRenderTriangleOpacityEvaluate.cpp" />
+    <ClCompile Include="source\AkgRenderTriangleOpacityMap.cpp" />
+    <ClCompile Include="source\AkgReshape.cpp" />
+    <ClCompile Include="source\AkgRibbonHairBall.cpp" />
+    <ClCompile Include="source\AkgShaderGenerator.cpp" />
+    <ClCompile Include="source\AkgTextureGenerator.cpp" />
+    <ClCompile Include="source\AkgTriangleHairBall.cpp" />
+    <ClCompile Include="source\external_futil.c" />
+    <ClCompile Include="source\external_loadbmp.c" />
+    <ClCompile Include="source\ikdContactWithGPU.cpp" />
+    <ClCompile Include="source\ikdDataSet.cpp" />
+    <ClCompile Include="source\ikdErrorCheck.cpp" />
+    <ClCompile Include="source\ikdObjects.cpp" />
+    <ClCompile Include="source\ikdPrepareShader.cpp" />
+    <ClCompile Include="source\Main.cpp" />
+    <ClCompile Include="source\readPixel.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0CBDFC9F-4814-478A-B155-74BF3BD9CFCF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OSMloadHairModel</RootNamespace>
+    <ProjectName>work</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;freeglut.lib;glew32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;freeglut.lib;glew32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>./lib/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;freeglut.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>U:\Edit\programs\c++\opencv\build\include\opencv2;U:\Edit\programs\c++\opencv\build\include\opencv;U:\Edit\programs\c++\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>./lib/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;freeglut.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
