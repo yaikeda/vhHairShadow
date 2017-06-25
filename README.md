@@ -1,3 +1,18 @@
+# About this repository
+
+This project is a research project focusing on computer graphics.
+The program allos users to render volumetric shadows of hair-shaped objects with following algorithms.
+
+- Opacity Shadow Maps
+- Deep Opacity Maps
+- Shadow Map
+
+However, when I write this program, I did not have enough skill to generate cmake or Scons files, so that there is no compile support systems in this repository.
+
+If you have any questions, please don't hesitate to send me messages about this repository.
+
+Thank you.
+
 # vhHairShadowについて
 このプログラムは，池田が卒論～修論にかけて使用していたプログラムになります．
 今回は研究の参考として，そして自分が行った研究がどこかへ行ってしまわないように保存するため，
