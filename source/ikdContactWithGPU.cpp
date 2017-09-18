@@ -6,7 +6,7 @@ void ikdContactWithGPU::setMatrix4f(const char* locationName, GLuint programHand
   if (location >= 0) {
     glUniformMatrix4fv(location, 1, GL_FALSE, &matrix[0][0]);
   } else {
-	  fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+	  std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
   }
 }
 
@@ -17,7 +17,7 @@ void ikdContactWithGPU::setTexture(const char* locationName, GLuint programHandl
   if (location >= 0) {
 	  glUniform1i(location, textureNum);
   } else {
-	  fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+	  std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
   }
 }
 
@@ -27,7 +27,7 @@ void ikdContactWithGPU::setVec4(const char* locationName, GLuint programHandle, 
 	if (location >= 0) {
 		glUniform4fv(location, 1, &vector[0]);
 	} else {
-		fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+		std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
 	}
 }
 
@@ -37,7 +37,7 @@ void ikdContactWithGPU::setVec3(const char* locationName, GLuint programHandle, 
 	if (location >= 0) {
 		glUniform3fv(location, 1, &vector[0]);
 	} else {
-		fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+		std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
 	}
 }
 
@@ -47,7 +47,7 @@ void ikdContactWithGPU::setFloat(const char* locationName, GLuint programHandle,
 	if (location >= 0) {
 		glUniform1f(location, value);
 	} else {
-		fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+		std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
 	}
 }
 
@@ -57,7 +57,7 @@ void ikdContactWithGPU::setIntValue(const char* locationName, GLuint programHand
 	if (location >= 0) {
 		glUniform1d(location, value);
 	} else {
-		fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+		std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
 	}
 }
 
@@ -67,7 +67,7 @@ void ikdContactWithGPU::setFloatArray(const char* locationName, GLuint programHa
 	if (location >= 0) {
 		glUniform1fv(location, size, floatArray);
 	} else {
-		fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+		std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
 	}
 }
 
@@ -77,7 +77,7 @@ void ikdContactWithGPU::setMatrix4fArray(const char* locationName, GLuint progra
 	if (location >= 0) {
 		glUniformMatrix4fv(location, size, GL_FALSE, mat4Array);
 	} else {
-		fprintf(stderr, "ユニフォーム変数%sが見つからない\n", locationName);
+		std::cerr << "ユニフォーム変数" << locationName << "が見つからない\n" << std::endl;
 	}
 }
 
@@ -87,7 +87,7 @@ void ikdContactWithGPU::setVec3Array(const char* locationName, GLuint programHan
 	if (location >= 0) {
 		glUniform3fv(location, size, vec3Array);
 	} else {
-		fprintf(stderr, "ユニフォーム変数%sがみつからない\n", locationName);
+		std::cerr << "ユニフォーム変数" << locationName << "がみつからない\n" << std::endl;
 	}
 }
 

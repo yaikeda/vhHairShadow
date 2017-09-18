@@ -3,7 +3,7 @@
 in vec4 ioPos;
 in vec2 ioUV;
 
-uniform sampler2DArray uDepthTex;//[“x’lƒ}ƒbƒv
+uniform sampler2DArray uDepthTex;//ï¿½[ï¿½xï¿½lï¿½}ï¿½bï¿½v
 uniform float uOpacityValue; 
 
 out vec4 fragColor;
@@ -13,9 +13,9 @@ void main()
 
 	
 
-	//ó‚¯æ‚Á‚½ˆÊ’u‚ğ³‹K‰»
+	//ï¿½ó‚¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê’uï¿½ğ³‹Kï¿½ï¿½
 	vec4 nowPos = ioPos / ioPos.w;
-	float z = nowPos.z;
+    float z = nowPos.z;
 
 
 	vec2 texPos = (nowPos.xy + 1.0)*0.5;
@@ -25,7 +25,7 @@ void main()
 	float opacityValue = uOpacityValue * weight;
 
   
-	//[“x’læ“¾
+	//ï¿½[ï¿½xï¿½lï¿½æ“¾
 	vec4 texColor = texture(uDepthTex, vec3(texPos, 0));
 	float near = texColor.x;
 
@@ -34,9 +34,9 @@ void main()
 	//return;
 
 
-	//ƒŒƒCƒ„‚ğ’u‚­ˆÊ’u‚ğŒˆ’è
+	//ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½uï¿½ï¿½ï¿½Ê’uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	float base = (1.0 - near) / 4.0;
-	float layerDistance[4] = float[4](0.0, 0.0, 0.0, 0.0);//“§–¾“x‹L˜^ˆÊ’u”‚Í4‚ÉŒÅ’è
+	float layerDistance[4] = float[4](0.0, 0.0, 0.0, 0.0);//ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Lï¿½^ï¿½Ê’uï¿½ï¿½ï¿½ï¿½4ï¿½ÉŒÅ’ï¿½
     layerDistance[0] = near + base;
     layerDistance[1] = layerDistance[0] + base;
     layerDistance[2] = layerDistance[1] + base;

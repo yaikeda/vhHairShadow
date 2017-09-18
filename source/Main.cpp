@@ -29,8 +29,8 @@
 const int SHOW_DEPTH_MAP = 0;//チェック用変数
 
 
-const int WIDTH = 512;
-const int HEIGHT = 512;
+const int WIDTH = 1024;
+const int HEIGHT = 1024;
 const int OSM_NUM = 12;//opacity shadow map
 int DOSM_NUM = 1;//論文曰く、一枚で距離を変えると十分きれいな影ができる。
 
@@ -132,7 +132,7 @@ void init(void)
   k_generalManager.SetCamera(pos, look, up, angleAspectNearFar);
   
   k_generalManager.SetWindowSize(WIDTH, HEIGHT);
-  k_generalManager.SetTextureSize(512);
+  k_generalManager.SetTextureSize(1024);
   k_generalManager.SetLight();
   k_generalManager.SetObjects();
   k_generalManager.SetRenderPass();

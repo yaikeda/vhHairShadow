@@ -1,8 +1,6 @@
 #include "AkgGeneralManager.h"
-
 #include "AkgShaderGenerator.h"
 #include "AkgTextureGenerator.h"
-
 #include "AkgRenderOpacityDepth.h"
 #include "AkgRenderOpacityMap.h"
 #include "AkgRenderOpacityEvaluate.h"
@@ -20,7 +18,6 @@
 #include "AkgRenderRectangleOpacityEvaluate.h"
 #include "AkgRenderDepthMap.h"
 #include "AkgRenderDepthMapshadows.h"
-
 
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
@@ -40,8 +37,7 @@ void AkgGeneralManager::SetLight(void)
 {
   glm::vec3 vPos = glm::vec3(0.0, 200.0, -200);
   glm::vec3 vLook = glm::vec3(0.0, 0.0, 0.0);
-  glm::vec3 vUp = glm::vec3(0.0, 1.0, 0.0);
-
+  glm::vec3 vUp = glm::vec3(0.0, -1.0, 0.0);
 
   t_LightInfo lightInfo;
   memcpy(lightInfo.pos, &vPos, sizeof(float) * 3);
@@ -142,7 +138,6 @@ void AkgGeneralManager::SetRenderPass(void)
   m_RenderPass["RectangleOpacityMap"] = shaderGenerator.LoadShader("shaders/RectangleOpacityMap");
   m_RenderPass["RectangleOpacityEvaluate"] = shaderGenerator.LoadShader("shaders/RectangleOpacityEval");
 
-
   m_RenderPass["DepthMap"] = shaderGenerator.LoadShader("shaders/DepthMap");
   m_RenderPass["DepthMapShadows"] = shaderGenerator.LoadShader("shaders/DepthMapShadows");
 }
@@ -167,8 +162,6 @@ void AkgGeneralManager::SetTexture(void)
     m_Texture.push_back(texture);  
   }
 }
-
-
 
 //Get
 int* AkgGeneralManager::GetWindowSize(void)
@@ -314,8 +307,8 @@ bool AkgGeneralManager::Render()
 {
   SetModelMatrix();//modelMatrixê›íË
 
-  RenderLineDeepOpacityMaps();
-  //RenderRectangleDeepOpacityMaps();
+  //RenderLineDeepOpacityMaps();
+  RenderRectangleDeepOpacityMaps();
   //RenderDeepOpacityMaps();
   //RenderDepthMapShadows();
   //RenderTriangleDeepOpacityMaps();
@@ -324,7 +317,7 @@ bool AkgGeneralManager::Render()
 
   glutSwapBuffers(); 
 
-  readpixel.saveImage(512, 512);
+  //readpixel.saveImage(1024, 1024);
     
   return true;
 }
@@ -640,7 +633,4 @@ void AkgGeneralManager::RenderVSMShadows(void)
   glViewport(0, 0, m_TextureSize, m_TextureSize );
   AkgRenderDepthMap RDM;
   RDM.Render(m_RenderPass["DepthMap"], objectInfo, m_Texture, &lightMVPMtx, m_Light);
-
-
-
 }

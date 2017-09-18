@@ -7,5 +7,5 @@ out vec4 fragColor;
 void main()
 {
 	float z = ioPos.z / ioPos.w;
-	fragColor = vec4(z, z, z, 1.0);
+    fragColor = vec4(z, z, z, 1.0);
 }

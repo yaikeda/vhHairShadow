@@ -1,4 +1,4 @@
-#include "ikdObjects.h"
+	#include "ikdObjects.h"
 
 
 GLuint ikdObjects::ikdTriangle()

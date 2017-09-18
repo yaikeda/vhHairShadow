@@ -40,7 +40,7 @@ void AkgKeyboard::exec(AkgGeneralManager* obj, unsigned char key, int x, int y)
     float pos[3] = { 282.0f, 150.0f, -4.93f };
     //float look[3] = { 275.0f, 143.0f, 0.0f };
     float look[3] = { 0.0f, 0.0f, 0.0f };
-    float up[3] = { 0.0f, 1.0f, 0.0f };
+    float up[3] = { 0.0f, -1.0f, 0.0f };
     float angleAspectNearFar[4] = { 110.0f, 1.0f, 1.0f, 5000.0f };
 
     obj->SetCamera(pos, look, up, angleAspectNearFar); 
@@ -142,7 +142,7 @@ void AkgKeyboard::exec(AkgGeneralManager* obj, unsigned char key, int x, int y)
 
     glm::vec3 vPos = glm::make_vec3(pos);
     glm::vec4 newPos = glm::rotate<float>(
-      glm::mat4(1.0f), 15, glm::vec3(0.0, 1.0, 0.0)) * glm::vec4(vPos, 1.0);
+      glm::mat4(1.0f), glm::radians(15.0), glm::vec3(0.0, 1.0, 0.0)) * glm::vec4(vPos, 1.0);
 
     memcpy(pos, &newPos[0], sizeof(float) * 3);
     obj->SetCamera(pos, NULL, NULL, NULL);
@@ -160,7 +160,7 @@ void AkgKeyboard::exec(AkgGeneralManager* obj, unsigned char key, int x, int y)
 
     glm::vec3 vPos = glm::make_vec3(pos);
     glm::vec4 newPos = glm::rotate<float>(
-      glm::mat4(1.0f), -15, glm::vec3(0.0, 1.0, 0.0)) * glm::vec4(vPos, 1.0);
+      glm::mat4(1.0f), glm::radians(-15.0), glm::vec3(0.0, 1.0, 0.0)) * glm::vec4(vPos, 1.0);
 
     memcpy(pos, &newPos[0], sizeof(float) * 3);
 
@@ -235,35 +235,20 @@ void AkgKeyboard::exec(AkgGeneralManager* obj, unsigned char key, int x, int y)
     */
   case 'z':
     {
-    //zoom
-    float pos[3];
-
-    obj->GetCamera(pos, NULL, NULL, NULL);
-
-    glm::mat4 scale = glm::scale<float>(glm::mat4(1.0f), glm::vec3(0.99f, 0.99f, 0.99f));
-
-    glm::vec4 vpos = glm::vec4(pos[0], pos[1], pos[2], 1.0);
-
-    vpos = scale * vpos;
-    memcpy(pos, &vpos[0], sizeof(float)*3);
-
-    obj->SetCamera(pos, NULL, NULL, NULL);
+	  //zoom
+	  float angle[4];
+	  obj->GetCamera(NULL, NULL, NULL, angle);
+	  angle[0] += glm::radians(5.0);
+	  obj->SetCamera(NULL, NULL, NULL, angle);
     }
     break;
   case 'Z':
     {
-    //zoom
-    float pos[3];
-
-    obj->GetCamera(pos, NULL, NULL, NULL);
-
-    glm::mat4 scale = glm::scale<float>(glm::mat4(1.0f), glm::vec3(1.01f, 1.01f, 1.01f));
-    glm::vec4 vpos = glm::vec4(pos[0], pos[1], pos[2], 1.0);
-
-    vpos = scale * vpos;
-    memcpy(pos, &vpos[0], sizeof(float) * 3);
-
-    obj->SetCamera(pos, NULL, NULL, NULL);
+	  //zoom
+	  float angle[4];
+	  obj->GetCamera(NULL, NULL, NULL, angle);
+	  angle[0] -= glm::radians(5.0);
+	  obj->SetCamera(NULL, NULL, NULL, angle);
     }
     break;
   default:
