@@ -24,6 +24,7 @@
 #include "glm/gtc/type_ptr.hpp"
 
 #include <string.h>
+#include <time.h>  
 
 
 
@@ -302,10 +303,21 @@ void AkgGeneralManager::SetMotionStart(int* motion)
   memcpy(m_MotionStart, motion, sizeof(int) * 2);
 }
 
+double clockToMilliseconds(clock_t ticks) {
+	return (ticks / (double)CLOCKS_PER_SEC)*1000.0;
+}
 
 bool AkgGeneralManager::Render()
 {
+	static clock_t deltaTime = 0;
+	static unsigned int frames = 0;
+	static double  frameRate = 30;
+	static double  averageFrameTimeMilliseconds = 33.333;
+
   SetModelMatrix();//modelMatrixÝ’è
+
+  // get time: start
+  clock_t beginFrame = clock();
 
   //RenderLineDeepOpacityMaps();
   RenderRectangleDeepOpacityMaps();
@@ -316,6 +328,25 @@ bool AkgGeneralManager::Render()
   //RenderVSMShadows();
 
   glutSwapBuffers(); 
+
+  // get time: end
+  clock_t endFrame = clock();
+
+  deltaTime += endFrame - beginFrame;
+  frames++;
+
+  //if you really want FPS
+  if (clockToMilliseconds(deltaTime)>1000.0) { //every second
+	  frameRate = (double)frames*0.5 + frameRate*0.5; //more stable
+	  frames = 0;
+	  deltaTime -= CLOCKS_PER_SEC;
+	  averageFrameTimeMilliseconds = 1000.0 / (frameRate == 0 ? 0.001 : frameRate);
+
+//	  if (vsync)
+		  std::cout << "FrameTime was:" << averageFrameTimeMilliseconds << std::endl;
+	//  else
+		  std::cout << "CPU time was:" << averageFrameTimeMilliseconds << std::endl;
+  }
 
   //readpixel.saveImage(1024, 1024);
     
