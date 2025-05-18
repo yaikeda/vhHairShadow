@@ -13,60 +13,60 @@ If you have any questions, please don't hesitate to send me messages about this 
 
 Thank you.
 
-# vhHairShadowについて
-このプログラムは，池田が卒論～修論にかけて使用していたプログラムになります．
-今回は研究の参考として，そして自分が行った研究がどこかへ行ってしまわないように保存するため，
-gitサーバ上で管理しようと思いました．
+# About vhHairShadow
 
-## 依存
-- glm
-- freeglut
-- OpenGL
-- GLEW
+This program was developed and used by Ikeda during his undergraduate and master's thesis research.  
+As both a reference for future studies and to ensure that the work I did doesn’t get lost over time, I’ve decided to preserve it by managing the repository on a Git server.
 
-## 設計思想
-「グローバル変数を可能な限りもたない」システムを目指しました．
+## Dependencies
 
-当時はglfwが今ほど一般的になっていなかったため，glutを使っていましたが，
-どうしてもコールバック関数などはグローバルに参照した方が効率的でした．
+- glm  
+- freeglut  
+- OpenGL  
+- GLEW  
 
-このグローバルに参照するのはひじょうに美しくないだけでなくソースコードの可読性，
-変数管理の面などでも支障をきたすため，これを可能な限り減少させることに努めました．
+## Design Philosophy
 
-仕組みとしては，glutよりも上位の階層に **全体を管理するクラス** を作成し，
-レンダリングを担当する基幹フレームワーク部分はすべてそのクラスの下でインスタンス変数として作成することを目指しています．
+This project aimed to minimize the use of **global variables** as much as possible.
 
-### オブジェクト指向
-また，オブジェクト指向プログラムを実現するため，基本的にすべての物体はそれを出力するためのクラスをもちます．
-これにより， **全体を管理するクラス** に任意のクラスを定義するだけで，新たなオブジェクトが使用可能になるような仕組みにしています．
+At the time, GLFW had not yet become as widespread as it is today, so I used GLUT. However, for efficiency—especially with callback functions—it was sometimes inevitable to use global references.
 
-レンダリングパイプラインも同様に，クラス単位で管理されています．
-これを作成した当時は時間の都合上，完全なインスタンス化には至りませんでしたが，
-レンダリングの各段階については一つのクラスで管理しています．
+Still, I felt that excessive use of global state was not only inelegant but also harmed readability and maintainability. So, I made an effort to eliminate it wherever possible.
 
-例えば，ボリュメトリックシェーディングでは，
-- シャドウマップ
-- ボリュームマップ
-- レンダリング
+To achieve this, I designed a **top-level management class** that sits above GLUT. The core framework responsible for rendering operates entirely under this manager class, with all submodules implemented as instance variables.
 
-の三段階があるわけですが，これに対応するそれぞれのクラスを呼び出すことで，簡単にレンダリングパイプラインを構築できるようになっています．
+### Object-Oriented Structure
 
-### モダンOpenGLの使用
-2013年時点では，リリースされたGLのバージョンこそある程度進んではいましたが，
-世の中の資料の多くは1.2や2.1で書かれていました．
-新しいものがリリースされているのに使わない，というのは情報系として気持ちが悪かったので，
-このプロジェクトではモダンOpenGLがもつデータの受け渡し法などを試験的に使用しています．
+To support an object-oriented programming model, nearly every renderable entity has its own dedicated class.  
+This makes it easy to add new objects: simply define a new class and register it with the **manager class**, and it will be ready to use.
 
-このように，学生だからこそこだわっている部分が少しずつ点在しているので，興味があればシェーダなどだけでも，覗いてみてもよいかもしれません．
+The rendering pipeline is also organized into modular classes.  
+Due to time constraints, I couldn't achieve full instancing at the time, but each stage of the rendering process is managed in its own class.
 
-## バージョン問題
-ただし，作成した時点からOpenGL周りの状況もかなり変わっているらしく，
-ハードウェア側が以前よりもメモリリークなどに厳しくなっているようです．
+For example, the volumetric shading pipeline consists of:
 
-このため，以前は強制終了など起こしていなかったために見過ごされていたバグなどが発生しており，
-数分でアボートしたりします．
+- Shadow map generation  
+- Volume map construction  
+- Final rendering pass  
 
-この点は気を付けてください．
+Each of these stages is encapsulated in its own class, allowing the pipeline to be built and executed by simply calling them in order.
 
-## 後悔している点
-- プロジェクト名：[OSM]loadHairModelという名称で作り始めてしまったが，Visual Studioのプロジェクトは後から名前を変えるのが大変なのでそのままになっている．
+### Use of Modern OpenGL
+
+As of 2013, although newer versions of OpenGL had already been released, most tutorials and documentation were still written for OpenGL 1.2 or 2.1.  
+I found it unsatisfying to ignore the latest developments, so in this project I experimented with techniques specific to **modern OpenGL**, such as structured data transfer.
+
+Since I was still a student, I had the freedom to care deeply about small details.  
+If you're interested, feel free to take a look—even just at the shader code.
+
+## Compatibility Notes
+
+Please note that the OpenGL environment has evolved significantly since this program was written.  
+Modern GPU drivers and hardware are more strict about things like memory leaks.
+
+As a result, bugs that used to be silently tolerated may now cause the program to crash or abort after a few minutes.  
+Please be aware of this when running the program.
+
+## Regrets
+
+- The project was originally named `[OSM]loadHairModel`, and since renaming Visual Studio projects can be a hassle, the name has remained unchanged.
